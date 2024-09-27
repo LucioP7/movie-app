@@ -1,7 +1,10 @@
+"use client";
+
 import { useState } from "react";
+import Link from "next/link";
 
 //Recibo el un objeto de array de peliculas
-export default function Carrusel({ movies }) {
+export default function MovieCarrusel({ movies }) {
 
     // Al establecerlo en 0 muestra la primer pelicula del array
     const [currentMovie, setCurrentMovie] = useState(0); 
@@ -21,7 +24,6 @@ export default function Carrusel({ movies }) {
     return (
         <div>
             <button onClick={handlePrev}>{"<"}</button>
-            {/* Imagen de fondo difuminada */}
             <img
                 src={`https://image.tmdb.org/t/p/w500${movies[currentMovie].backdrop_path}`}
                 alt={movies[currentMovie].title}
@@ -32,7 +34,7 @@ export default function Carrusel({ movies }) {
             />
             <h2 className="text-4xl font-bold mb-4">{movies[currentMovie].title}</h2>
             <p className="text-xl mb-6">{movies[currentMovie].overview}</p>
-            <button className="self-start">Ver ahora</button>
+            <Link href={`../movies/${movies[currentMovie].id}`}><button className="self-start">Ver ahora</button></Link>
             <button onClick={handleNext}>{">"}</button>        
         </div>
     );

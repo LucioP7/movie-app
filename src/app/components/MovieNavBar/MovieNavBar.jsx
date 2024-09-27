@@ -1,4 +1,6 @@
-export default function NavBar() {
+"use client";
+
+export default function MovieNavBar() {
     return (
         <nav className="bg-gray-800 text-white p-4 z-10">
             <ul className="flex space-x-4 justify-center">
