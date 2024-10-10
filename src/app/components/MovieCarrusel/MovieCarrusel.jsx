@@ -34,7 +34,7 @@ export default function MovieCarrusel({ movies }) {
             />
             <h2 className="text-4xl font-bold mb-4">{movies[currentMovie].title}</h2>
             <p className="text-xl mb-6">{movies[currentMovie].overview}</p>
-            <Link href={`../movies/${movies[currentMovie].id}`}><button className="self-start">Ver ahora</button></Link>
+            <Link href={`../movies/${movies[currentMovie].id}`}><button className="self-start">Más info...</button></Link>
             <button onClick={handleNext}>{">"}</button>        
         </div>
     );
