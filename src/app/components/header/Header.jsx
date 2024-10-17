@@ -5,6 +5,7 @@ export default function Header() {
                 <li><a href="/" className="hover:text-gray-300 transition-colors duration-300">Inicio</a></li>
                 <li><a href="/movies" className="hover:text-gray-300 transition-colors duration-300">Movies</a></li>
                 <li><a href="/series" className="hover:text-gray-300 transition-colors duration-300">Series</a></li>
+                <li><a href="/series" className="hover:text-gray-300 transition-colors duration-300">Series</a></li>
             </ul>
         </nav>
     )
